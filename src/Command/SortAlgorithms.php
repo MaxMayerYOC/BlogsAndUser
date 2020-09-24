@@ -18,7 +18,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class SortAlgorithms extends Command
 {
-#Test File: /sorting/public/array.txt
+
+#Test file:         /sorting/public/array.txt
+#Sorted test file:  /sorting/public/sorted.array.txt
 
 
     /**
@@ -58,7 +60,9 @@ class SortAlgorithms extends Command
     {
         $this
             ->setName('sorter')
-            ->setDescription('Sort a List in a File')
+            ->setDescription('Sort a list from a file
+  and save it in a new file
+  or output it in the Terminal.')
 
             ->addArgument(
                 'path',
@@ -67,10 +71,15 @@ class SortAlgorithms extends Command
             )
 
             ->addArgument(
-                'sortalgorithm',
+                'algorithm',
                 InputArgument::REQUIRED,
-                'Choose a sortalgorithm: bub = bubblesort mer = mergeSort min = minSort qui = quickSort.'
+                'Choose a algorithm:
+                bub = bubblesort 
+                mer = mergeSort 
+                min = minSort 
+                qui = quickSort'
             )
+
             ->addOption(
             'terminal_output',
             't'
@@ -83,7 +92,7 @@ class SortAlgorithms extends Command
     {
 
         $path=$input->getArgument('path');
-        $sort=$input->getArgument('sortalgorithm');
+        $sort=$input->getArgument('algorithm');
 
         $data = $this->dataprovider->DataProvider($path);
 

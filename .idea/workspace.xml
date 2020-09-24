@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0138e482-8c68-42de-bd5a-2d1bee3d6db4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/array.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Command/SortAlgorithms.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/BubbleSort.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/DataProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/MergeSort.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/MinSort.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Output.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/QuickSort.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/array.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/array.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sorted.array.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/sorted.array.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/SortAlgorithms.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/SortAlgorithms.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +86,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600846520500</updated>
-      <workItem from="1600846521547" duration="36922000" />
+      <workItem from="1600846521547" duration="38755000" />
     </task>
     <servers />
   </component>
