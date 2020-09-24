@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0138e482-8c68-42de-bd5a-2d1bee3d6db4" name="Default Changelist" comment="" />
+    <list default="true" id="0138e482-8c68-42de-bd5a-2d1bee3d6db4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/array.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Command/SortAlgorithms.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/BubbleSort.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/DataProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/MergeSort.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/MinSort.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Output.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/QuickSort.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,15 +62,27 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1hu2BUY7S9EOsGI0Fs4OM4cRPwq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cauldron_overflow" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Command" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,17 +92,56 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600846520500</updated>
-      <workItem from="1600846521547" duration="12000" />
+      <workItem from="1600846521547" duration="36922000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1208" y="394" width="444" height="249" key="#Composer" timestamp="1600846532036">
       <screen x="0" y="27" width="1920" height="977" />
     </state>
     <state x="1208" y="394" width="444" height="249" key="#Composer/0.27.1920.977@0.27.1920.977" timestamp="1600846532036" />
+    <state x="836" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600933104051">
+      <screen x="0" y="27" width="1920" height="977" />
+    </state>
+    <state x="836" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.977@0.27.1920.977" timestamp="1600933104051" />
+    <state x="1248" y="234" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1600864323482">
+      <screen x="0" y="27" width="1920" height="977" />
+    </state>
+    <state x="1248" y="234" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.977@0.27.1920.977" timestamp="1600864323482" />
+    <state x="1183" y="176" width="504" height="685" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600931905452">
+      <screen x="0" y="27" width="1920" height="977" />
+    </state>
+    <state x="1183" y="176" width="504" height="685" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.977@0.27.1920.977" timestamp="1600931905452" />
+    <state x="1223" y="273" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600849118723">
+      <screen x="0" y="27" width="1920" height="977" />
+    </state>
+    <state x="1223" y="273" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.977@0.27.1920.977" timestamp="1600849118723" />
+    <state x="1230" y="235" width="497" height="617" key="NewPhpClassDialog" timestamp="1600954791402">
+      <screen x="0" y="27" width="1920" height="977" />
+    </state>
+    <state x="1230" y="235" width="497" height="617" key="NewPhpClassDialog/0.27.1920.977@0.27.1920.977" timestamp="1600954791402" />
+    <state x="1235" y="441" width="399" height="156" key="NewPhpFileDialog" timestamp="1600848950233">
+      <screen x="0" y="27" width="1920" height="977" />
+    </state>
+    <state x="1235" y="441" width="399" height="156" key="NewPhpFileDialog/0.27.1920.977@0.27.1920.977" timestamp="1600848950233" />
+    <state x="898" y="150" width="1022" height="737" key="SettingsEditor" timestamp="1600847238568">
+      <screen x="0" y="27" width="1920" height="977" />
+    </state>
+    <state x="898" y="150" width="1022" height="737" key="SettingsEditor/0.27.1920.977@0.27.1920.977" timestamp="1600847238568" />
+    <state x="1219" y="288" width="432" height="462" key="refactoring.ChangeSignatureDialog" timestamp="1600940577638">
+      <screen x="0" y="27" width="1920" height="977" />
+    </state>
+    <state x="1219" y="288" width="432" height="462" key="refactoring.ChangeSignatureDialog/0.27.1920.977@0.27.1920.977" timestamp="1600940577638" />
+    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1600864179016">
+      <screen x="0" y="27" width="1920" height="977" />
+    </state>
+    <state x="1103" y="240" width="672" height="678" key="search.everywhere.popup/0.27.1920.977@0.27.1920.977" timestamp="1600864179016" />
   </component>
 </project>
