@@ -10,15 +10,18 @@ class DataProvider
 
     public function DataProvider($path)
     {
+        //Scrap the data from the file in $path
         $data = file_get_contents('..'.$path);
 
-        $data=explode(',',$data);
+        //Split the file into an array
+        $data=preg_split("/[\s,]+/",$data);
 
+        //Clean up the array
         foreach ($data as &$value)
         {
-                $value = (filter_var($value, FILTER_SANITIZE_NUMBER_INT));
-        }
 
+                $value = (filter_var($value, FILTER_SANITIZE_NUMBER_FLOAT));
+        }
         return $data;
     }
 

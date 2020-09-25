@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0138e482-8c68-42de-bd5a-2d1bee3d6db4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/array.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/array.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sorted.array.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/sorted.array.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/SortAlgorithms.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/SortAlgorithms.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +10,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -67,7 +65,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cauldron_overflow" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test_Database" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -87,6 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600846520500</updated>
       <workItem from="1600846521547" duration="38755000" />
+      <workItem from="1601018254436" duration="1151000" />
     </task>
     <servers />
   </component>
@@ -113,10 +112,10 @@
       <screen x="0" y="27" width="1920" height="977" />
     </state>
     <state x="1183" y="176" width="504" height="685" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.977@0.27.1920.977" timestamp="1600931905452" />
-    <state x="1223" y="273" width="424" height="491" key="FileChooserDialogImpl" timestamp="1600849118723">
+    <state x="1223" y="273" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601019843224">
       <screen x="0" y="27" width="1920" height="977" />
     </state>
-    <state x="1223" y="273" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.977@0.27.1920.977" timestamp="1600849118723" />
+    <state x="1223" y="273" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.977@0.27.1920.977" timestamp="1601019843224" />
     <state x="1230" y="235" width="497" height="617" key="NewPhpClassDialog" timestamp="1600954791402">
       <screen x="0" y="27" width="1920" height="977" />
     </state>

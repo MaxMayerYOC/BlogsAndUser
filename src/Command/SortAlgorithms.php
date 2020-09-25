@@ -24,12 +24,25 @@ class SortAlgorithms extends Command
 
 
     /**
-     * @var BubbleSort
-     * @var MinSort
-     * @var QuickSort
      * @var MergeSort
+     */
+    private $mergesort;
+    /**
+     * @var MinSort
+     */
+    private $minsort;
+    /**
+     * @var QuickSort
+     */
+    private $quicksort;
+    /**
+     * @var BubbleSort
+     */
+    private $bubblesort;
+    /**
      * @var DataProvider
      */
+    private $dataprovider;
 
     /**
      * SortAlgorithms constructor.
@@ -60,7 +73,7 @@ class SortAlgorithms extends Command
     {
         $this
             ->setName('sorter')
-            ->setDescription('Sort a list from a file
+            ->setDescription('Sort a array of numbers  from a file
   and save it in a new file
   or output it in the Terminal.')
 
@@ -84,21 +97,18 @@ class SortAlgorithms extends Command
             'terminal_output',
             't'
             );
-
     }
 
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
+        //Get the inputs and data
         $path=$input->getArgument('path');
         $sort=$input->getArgument('algorithm');
-
         $data = $this->dataprovider->DataProvider($path);
 
 
         //Choose the Sort Algorithm
-
         switch ($sort) {
             case 'bub':
                 $data= $this->bubblesort->BubbleSort($data);
@@ -112,21 +122,19 @@ class SortAlgorithms extends Command
             case 'mer':
                 $data= $this->mergesort->MergeSort($data);
         }
-        //Array to String
 
-        $data=implode(", ", array_filter($data));
+
+        //Array to String
+        $data=trim(implode(" ", $data));
 
         //Output
-
         if ($input->getOption('terminal_output'))
         {
-            $output->writeln(
-                'The sorted Array: '.
-                $data
-            );
+            $output->writeln('The sorted Array: '.$data);
         } else
         {
-            Output::Output($data,$path);
+            $path=Output::Output($data,$path);
+            $output->writeln('Sorted array saved into: ..'.$path);
         }
 
         return Command::SUCCESS;
