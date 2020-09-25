@@ -14,6 +14,7 @@ class MergeSort implements Sorting
             $k = 0;
             $i = 0;
             $j = 0;
+            //Split the array
             foreach ($data as $value) {
                 if ($k <= round(count($data) / 2 - 1)) {
                     $left[$i] = $value;
@@ -24,16 +25,18 @@ class MergeSort implements Sorting
                 }
                 $k++;
             }
+            //Recursive split until they are arrays of 1-2 values
             $left = $this->sort($left);
             $right = $this->sort($right);
-            $data = $this->merge($left, $right, $data);
+            //Combine two arrays
+            $data = $this->merge($left, $right);
             return $data;
         }
     }
 
-    private function merge(array $left, array $right, array $data)
+    private function merge(array $left, array $right)
     {
-
+        //Combine two arrays of size 1-2, by comparing them
         $k = 0;
         while (!(empty($left) or empty($right))) {
 

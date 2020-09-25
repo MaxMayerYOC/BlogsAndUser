@@ -19,8 +19,7 @@ class DataProvider
         //Clean up the array
         foreach ($data as &$value)
         {
-
-                $value = (filter_var($value, FILTER_SANITIZE_NUMBER_FLOAT));
+            $value = (filter_var($value, FILTER_SANITIZE_NUMBER_FLOAT));
         }
         return $data;
     }
