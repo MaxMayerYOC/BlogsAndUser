@@ -1,12 +1,12 @@
 <?php
 
 
-namespace App\Controller;
+namespace App\Sorter;
 
 
-class BubbleSort
+class BubbleSort implements Sorting
 {
-    public function BubbleSort($data)
+    public function sort(array $data):array
     {
 
         $anz = count($data);
@@ -21,5 +21,4 @@ class BubbleSort
         }
         return $data;
     }
-
 }

@@ -1,20 +1,20 @@
 <?php
 
 
-namespace App\Controller;
+namespace App\Sorter;
 
 
-class MinSort
+class MinSort implements Sorting
 {
-    public function MinSort($data)
+    public function sort(array $data):array
     {
-        $anz=count($data);
+        $count=count($data);
         $k=0;
-        for($j=0;$j<$anz-1;$j++){
-            for($i=0;$i<$anz-$k;$i++){
+        for($j=0;$j<$count-1;$j++){
+            for($i=0;$i<$count-$k;$i++){
 
                 if ($data[$i] == min($data)){
-                    $erg[$k]=$data[$i];
+                    $cache[$k]=$data[$i];
                     $y=$data[0];
                     $data[0]=$data[$i];
                     $data[$i]=$y;
@@ -24,7 +24,7 @@ class MinSort
             }
         }
         $k=0;
-        foreach($erg as $value){
+        foreach($cache as $value){
             $data[$k]=$value;
             $k++;
         }

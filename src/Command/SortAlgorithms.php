@@ -5,12 +5,12 @@ namespace App\Command;
 
 
 
-use App\Controller\BubbleSort;
-use App\Controller\DataProvider;
-use App\Controller\MergeSort;
-use App\Controller\MinSort;
-use App\Controller\Output;
-use App\Controller\QuickSort;
+use App\Sorter\BubbleSort;
+use App\Sorter\DataProvider;
+use App\Sorter\MergeSort;
+use App\Sorter\MinSort;
+use App\Sorter\Output;
+use App\Sorter\QuickSort;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -19,8 +19,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 class SortAlgorithms extends Command
 {
 
-#Test file:         /sorting/public/array.txt
-#Sorted test file:  /sorting/public/sorted.array.txt
+#Test file:         /sorting/public/TestData/array.txt
+#Sorted test file:  /sorting/public/TestData/sorted.array.txt
 
 
     /**
@@ -111,16 +111,16 @@ class SortAlgorithms extends Command
         //Choose the Sort Algorithm
         switch ($sort) {
             case 'bub':
-                $data= $this->bubblesort->BubbleSort($data);
+                $data= $this->bubblesort->sort($data);
                 break;
             case 'qui':
-                $data= $this->quicksort->QuickSort($data);
+                $data= $this->quicksort->sort($data);
                 break;
             case 'min':
-                $data= $this->minsort->MinSort($data);
+                $data= $this->minsort->sort($data);
                 break;
             case 'mer':
-                $data= $this->mergesort->MergeSort($data);
+                $data= $this->mergesort->sort($data);
         }
 
 
