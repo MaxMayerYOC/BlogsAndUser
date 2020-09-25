@@ -8,7 +8,7 @@ namespace App\Command;
 use App\Sorter\BubbleSort;
 use App\Sorter\DataProvider;
 use App\Sorter\MergeSort;
-use App\Sorter\MinSort;
+use App\Sorter\SelectionSort;
 use App\Sorter\Output;
 use App\Sorter\QuickSort;
 use Symfony\Component\Console\Command\Command;
@@ -18,7 +18,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class SortAlgorithms extends Command
 {
-
+#v.1.5
 #Test file:         /sorting/public/TestData/array.txt
 #Sorted test file:  /sorting/public/TestData/sorted.array.txt
 
@@ -28,9 +28,9 @@ class SortAlgorithms extends Command
      */
     private $mergesort;
     /**
-     * @var MinSort
+     * @var SelectionSort
      */
-    private $minsort;
+    private $selsort;
     /**
      * @var QuickSort
      */
@@ -47,7 +47,7 @@ class SortAlgorithms extends Command
     /**
      * SortAlgorithms constructor.
      * @param BubbleSort $bubbleSort
-     * @param MinSort $minSort
+     * @param SelectionSort $selSort
      * @param QuickSort $quickSort
      * @param MergeSort $mergeSort
      * @param DataProvider $path
@@ -55,14 +55,14 @@ class SortAlgorithms extends Command
 
     public function __construct(
         BubbleSort $bubbleSort,
-        MinSort $minSort,
+        SelectionSort $selSort,
         QuickSort $quickSort,
         Mergesort $mergeSort,
         DataProvider $path
         )
     {
         $this->bubblesort = $bubbleSort;
-        $this->minsort = $minSort;
+        $this->selsort = $selSort;
         $this->quicksort=$quickSort;
         $this->mergesort=$mergeSort;
         $this->dataprovider=$path;
@@ -87,14 +87,14 @@ class SortAlgorithms extends Command
                 'algorithm',
                 InputArgument::REQUIRED,
                 'Choose a algorithm:
-                bub = bubblesort 
-                mer = mergeSort 
-                min = minSort 
-                qui = quickSort'
+                bub = Bubblesort 
+                mer = Mergesort 
+                sel = SelectionSort 
+                qui = Quicksort'
             )
 
             ->addOption(
-            'terminal_output',
+            'terminal-output',
             't'
             );
     }
@@ -116,8 +116,8 @@ class SortAlgorithms extends Command
             case 'qui':
                 $data= $this->quicksort->sort($data);
                 break;
-            case 'min':
-                $data= $this->minsort->sort($data);
+            case 'sel':
+                $data= $this->selsort->sort($data);
                 break;
             case 'mer':
                 $data= $this->mergesort->sort($data);
@@ -128,7 +128,7 @@ class SortAlgorithms extends Command
         $data=trim(implode(" ", $data));
 
         //Output
-        if ($input->getOption('terminal_output'))
+        if ($input->getOption('terminal-output'))
         {
             $output->writeln('The sorted Array: '.$data);
         } else

@@ -4,7 +4,7 @@
 namespace App\Sorter;
 
 
-class MinSort implements Sorting
+class SelectionSort implements Sorting
 {
     public function sort(array $data):array
     {

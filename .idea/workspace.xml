@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0138e482-8c68-42de-bd5a-2d1bee3d6db4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorter/DataProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/DataProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorter/MergeSort.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/MergeSort.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/SortAlgorithms.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/SortAlgorithms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sorter/MinSort.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/SelectionSort.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerYZjJax1/getSortAlgorithmsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/ContainerYZjJax1/getSortAlgorithmsService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerYZjJax1/removed-ids.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/ContainerYZjJax1/removed-ids.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600846520500</updated>
       <workItem from="1600846521547" duration="38755000" />
-      <workItem from="1601018254436" duration="15275000" />
+      <workItem from="1601018254436" duration="15725000" />
     </task>
     <servers />
   </component>
@@ -114,10 +116,10 @@
       <screen x="0" y="27" width="1920" height="977" />
     </state>
     <state x="1248" y="234" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.977@0.27.1920.977" timestamp="1600864323482" />
-    <state x="1183" y="176" width="504" height="685" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600931905452">
+    <state x="1183" y="176" width="504" height="685" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601044895077">
       <screen x="0" y="27" width="1920" height="977" />
     </state>
-    <state x="1183" y="176" width="504" height="685" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.977@0.27.1920.977" timestamp="1600931905452" />
+    <state x="1183" y="176" width="504" height="685" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.977@0.27.1920.977" timestamp="1601044895077" />
     <state x="1223" y="273" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601019843224">
       <screen x="0" y="27" width="1920" height="977" />
     </state>
