@@ -8,7 +8,7 @@ class DataProvider
 {
 #Test File: /sorting/public/array.txt
 
-    public function DataProvider($path)
+    public function provide($path)
     {
         //Scrap the data from the file in $path
         $data = file_get_contents('..'.$path);

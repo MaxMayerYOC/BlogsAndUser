@@ -4,8 +4,9 @@
 namespace App\Sorter;
 
 
-class QuickSort
+class QuickSort implements Sorting
 {
+    #Runtime: n log n
     public function sort(array $data):array
     {
         $left=0;

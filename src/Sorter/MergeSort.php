@@ -6,6 +6,7 @@ namespace App\Sorter;
 
 class MergeSort implements Sorting
 {
+    #Runtime: n log n
     public function sort(array $data): array
     {
         if (count($data) <= 1) {

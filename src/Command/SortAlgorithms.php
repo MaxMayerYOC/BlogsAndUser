@@ -4,7 +4,6 @@
 namespace App\Command;
 
 
-
 use App\Sorter\BubbleSort;
 use App\Sorter\DataProvider;
 use App\Sorter\MergeSort;
@@ -18,33 +17,17 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class SortAlgorithms extends Command
 {
-#v.1.5
+#v.1.6
 #Test file:         /sorting/public/TestData/array.txt
 #Sorted test file:  /sorting/public/TestData/sorted.array.txt
 
 
     /**
      * @var MergeSort
-     */
-    private $mergesort;
-    /**
      * @var SelectionSort
-     */
-    private $selsort;
-    /**
      * @var QuickSort
-     */
-    private $quicksort;
-    /**
      * @var BubbleSort
-     */
-    private $bubblesort;
-    /**
      * @var DataProvider
-     */
-    private $dataprovider;
-
-    /**
      * SortAlgorithms constructor.
      * @param BubbleSort $bubbleSort
      * @param SelectionSort $selSort
@@ -52,6 +35,15 @@ class SortAlgorithms extends Command
      * @param MergeSort $mergeSort
      * @param DataProvider $path
      */
+
+
+    private $dataprovider;
+    private $mergesort;
+    private $selsort;
+    private $quicksort;
+    private $bubblesort;
+
+
 
     public function __construct(
         BubbleSort $bubbleSort,
@@ -105,7 +97,7 @@ class SortAlgorithms extends Command
         //Get the inputs and data
         $path=$input->getArgument('path');
         $sort=$input->getArgument('algorithm');
-        $data = $this->dataprovider->DataProvider($path);
+        $data = $this->dataprovider->provide($path);
 
 
         //Choose the Sort Algorithm
