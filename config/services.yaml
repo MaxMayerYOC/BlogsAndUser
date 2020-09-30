@@ -35,3 +35,11 @@ services:
     App\Command\:
         resource: '../src/Command/'
         tags: [name: console.command]
+
+    App\Command\SortCommand:
+        arguments:
+            $projectDir: '%kernel.project_dir%'
+
+    App\Controller\SortController:
+        arguments:
+            $projectDir: '%kernel.project_dir%'

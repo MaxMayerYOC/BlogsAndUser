@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <style>
+        .error {color: #FF0000;}
+    </style>
+    <title>Welcome</title>
+</head>
+<body>
+
+
+
+<h2>INT Array Sorting Algorithm</h2>
+
+<form method="POST" action="{{ path('app_homepage') }}" enctype="multipart/form-data">
+    Select file to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <br><br>
+
+
+    <label for="sort">Choose a Sortalgorithm:</label>
+        <select name="sort" id="sort">
+            <option value="qui">Quicksort</option>
+            <option value="mer">Mergesort</option>
+            <option value="sel">Selectionsort</option>
+            <option value="bub">Bubblesort</option>
+        </select>
+
+    <br><br>
+    <input type="submit" value="Upload File" name="submit">
+
+</form>
+
+
+
+
+
+<p>Hello {{ data }}!</p>
+</body>
