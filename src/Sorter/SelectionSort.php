@@ -4,9 +4,16 @@
 namespace App\Sorter;
 
 
-class SelectionSort implements Sorting
+use App\DataHandling\SortingInterface;
+
+class SelectionSort implements SortingInterface
 {
     #Runtime: n^2
+    public static function getName(): string
+    {
+        return 'sel';
+    }
+
     public function sort(array $data):array
     {
         $count=count($data);

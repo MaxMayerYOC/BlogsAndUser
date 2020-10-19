@@ -3,8 +3,7 @@
 
 namespace App\Controller;
 
-use App\Sorter\DataProcessor;
-use App\Sorter\Output;
+use App\DataHandling\DataProcessor;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -30,16 +29,14 @@ class SortController extends AbstractController
      * @return Response
      */
 
-
-
     public function homepage()
     {
+        $sortalgorithm='';
         $data=' no file uploaded';
         if (!empty($_REQUEST["sort"])) {
-            $sort = $_REQUEST["sort"];
+            $sortalgorithm = $_REQUEST["sort"];
 
             if (!empty($_FILES["fileToUpload"]["tmp_name"])) {
-
                 $data = file_get_contents($_FILES["fileToUpload"]["tmp_name"]);
 
                 //Split the file into an array
@@ -51,24 +48,12 @@ class SortController extends AbstractController
                 }
 
                 //Process the data
-                array_unshift($data,$sort);
-                $data= $this->dataprocessor->process ($data);
-
-                $data='here is your sorted data: '.$data;
+                $data= $this->dataprocessor->processing ($sortalgorithm, $data);
 
                 //Output the data
-
-
-
-               # var_dump($projectDir); die();
-                #var_dump($_FILES["fileToUpload"]["name"]);
-
-                $path=$this->projectDir. '/public/TestData/'.$_FILES["fileToUpload"]["name"];
-                $path=Output::save($data,$path);
-
+                $data='here is your sorted data: '.$data;
             }
         }
-        return $this->render('sorter/homepage.twig', ['data' => $data,'sort'=>$sort]);
-
+        return $this->render('sorter/homepage.twig', ['data'=>$data,'sort'=>$sortalgorithm]);
     }
 }

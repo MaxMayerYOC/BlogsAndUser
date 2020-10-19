@@ -4,8 +4,15 @@
 namespace App\Sorter;
 
 
-class MergeSort implements Sorting
+use App\DataHandling\SortingInterface;
+
+class MergeSort implements SortingInterface
 {
+    public static function getName(): string
+    {
+        return 'mer';
+        // TODO: Implement getName() method.
+    }
     #Runtime: n log n
     public function sort(array $data): array
     {
@@ -56,7 +63,6 @@ class MergeSort implements Sorting
             $data[$k] = array_shift($right);
             $k++;
         }
-
         return $data;
     }
 }

@@ -1,17 +1,13 @@
 <?php
 
 
-namespace App\Sorter;
+namespace App\DataHandling;
 
 
 
 class FileDataProvider
 {
 #Test File: /sorting/public/array.txt
-    private $datapreprocessor;
-
-
-
     public function provide($path)
     {
         //Scrap the data from the file in $path

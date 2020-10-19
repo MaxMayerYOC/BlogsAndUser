@@ -4,9 +4,9 @@
 namespace App\Command;
 
 
-use App\Sorter\FileDataProvider;
-use App\Sorter\DataProcessor;
-use App\Sorter\Output;
+use App\DataHandling\FileDataProvider;
+use App\DataHandling\DataProcessor;
+use App\DataHandling\Output;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -14,10 +14,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class SortCommand extends Command
 {
-#v.1.6
+#v.1.8
 #Test file:         /sorting/public/TestData/array.txt
 #Sorted test file:  /sorting/public/TestData/sorted.array.txt
-
 
     /**
      * @param FileDataProvider $path
@@ -26,11 +25,9 @@ class SortCommand extends Command
      * @var DataProcessor
      */
 
-
-    private $filedataprovider;
-    private $dataprocessor;
+    private $fileDataProvider;
+    private $dataProcessor;
     private $projectDir;
-
 
     public function __construct(
         FileDataProvider $path,
@@ -38,8 +35,8 @@ class SortCommand extends Command
         string $projectDir
         )
     {
-        $this->filedataprovider=$path;
-        $this->dataprocessor=$data;
+        $this->fileDataProvider=$path;
+        $this->dataProcessor=$data;
         $this->projectDir = $projectDir;
         parent::__construct();
     }
@@ -74,18 +71,15 @@ class SortCommand extends Command
             );
     }
 
-
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         //Get the inputs and data
         $path= $input->getArgument('path');
-        #$this->projectDir.
+        $sortAlgorithm=$input->getArgument('algorithm');
+        $data = $this->fileDataProvider->provide($path);
 
-        $sortalgorithm=$input->getArgument('algorithm');
-        $data = $this->filedataprovider->provide($path);
-
-        array_unshift($data,$sortalgorithm);
-        $data= $this->dataprocessor->process ($data);
+        //Process the data
+        $data= $this->dataProcessor->processing($sortAlgorithm, $data);
 
         //Output
         if ($input->getOption('terminal-output'))
@@ -93,10 +87,10 @@ class SortCommand extends Command
             $output->writeln('The sorted Array: '.$data);
         } else
         {
-            $path=Output::save($data,$path);
-            $output->writeln('Sorted array saved into: ..'.$path);
+            $path=Output::save($data,$path, false);
+            $output->writeln('Sorted array saved into: '.$path);
         }
-
+        
         return Command::SUCCESS;
     }
 }

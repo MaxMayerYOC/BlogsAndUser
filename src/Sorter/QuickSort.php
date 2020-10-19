@@ -4,8 +4,15 @@
 namespace App\Sorter;
 
 
-class QuickSort implements Sorting
+use App\DataHandling\SortingInterface;
+
+class QuickSort implements SortingInterface
 {
+    public static function getName(): string
+    {
+        return 'qui';
+        // TODO: Implement getName() method.
+    }
     #Runtime: n log n
     public function sort(array $data):array
     {
@@ -16,8 +23,6 @@ class QuickSort implements Sorting
         return $data;
     }
 
-
-
     private function splitter (int $left,int $right,array $data){
         if ($left < $right){
             $data=$this->sorter($left, $right, $data);
@@ -27,9 +32,6 @@ class QuickSort implements Sorting
         }
         return $data;
     }
-
-
-
 
     private function sorter(int $left,int $right,array $data){
         $splitpoint=$left;
@@ -43,6 +45,7 @@ class QuickSort implements Sorting
             while($j>$left and $data[$j]>=$pivot){
                 $j=$j-1;
             }
+
             if ($splitpoint<$j){
                 $z=$data[$splitpoint];
                 $data[$splitpoint]=$data[$j];
