@@ -16,7 +16,6 @@ services:
     App\:
         resource: '../src/'
         exclude:
-            - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
             - '../src/Tests/'
@@ -27,10 +26,6 @@ services:
         resource: '../src/Controller/'
         tags: ['controller.service_arguments']
 
-    App\Controller\SortController:
-        arguments:
-            $projectDir: '%kernel.project_dir%'
-
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
@@ -38,20 +33,5 @@ services:
         resource: '../src/Command/'
         tags: [name: console.command]
 
-    App\Command\SortCommand:
-        arguments:
-            $projectDir: '%kernel.project_dir%'
-
-    App\Sorter\:
-        resource: '../src/Sorter'
-        tags:
-            - { name: "crv.sorter" } #connected to: App\DependencyInjection\Compiler\SortPass, const CRV_SORTER
-
-    App\DataHandling\:
-        resource: '../src/DataHandling'
-
-    App\DataHandling\SimpleSortRegistry:
-        tags: [name: 'crv.sorting' ] #connected to: App\DependencyInjection\Compiler\SortPass, const CRV_SORTING
-
-    crv.sorting:
-        alias: App\DataHandling\SimpleSortRegistry
+    App\public\images\:
+        resource: '../public/images/'

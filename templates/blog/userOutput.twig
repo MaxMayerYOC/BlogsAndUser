@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #myInput {
+            background-image: url('https://www.w3schools.com/css/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #userTable {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
+
+        #userTable th, #userTable td {
+            text-align: left;
+            padding: 12px;
+        }
+
+        #userTable tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        #userTable tr.header, #userTable tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+    <title>User Output</title>
+</head>
+<body>
+<h1>User Output</h1>
+
+<h3>Click the button to add a User.</h3>
+
+<button onclick="document.location='/user/new'">Add user</button><br><br>
+
+<input type="text" id="myInput" onkeyup="searchTable(1)" placeholder="Search by first names.." title="Type in a name">
+
+
+<table id="userTable">
+    <tr class="header">
+        <th style="width:10%;">User ID</th>
+        <th style="width:30%;">First Name</th>
+        <th style="width:20%;">Last Name</th>
+        <th style="width:40%;">Added at</th>
+    </tr>
+    {% for user in users %}
+        <tr>
+            <td>{{ user.id|e }}</td>
+            <td>{{ user.fname|e }}</td>
+            <td>{{ user.lname|e }}</td>
+            <td>{{ user.dateAdded|format_datetime(locale='eng') }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<script>
+    function searchTable(n) {
+        let input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("userTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) { //Iterate over the table Rows
+            td = tr[i].getElementsByTagName("td")[n]; // Which column to search: [0...n]
+            if (td) { //If the Row matches show it
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+</body>

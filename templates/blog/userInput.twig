@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    </style>
+    <title>User Input</title>
+</head>
+<body>
+<h1>User Input</h1>
+<h3>Click the button to go to the user List.</h3>
+
+<button onclick="document.location='/user/show'">User list</button><br><br>
+
+<h3>Input your Name and hit Submit</h3>
+<form method="POST" action="{{ path('user_new') }}">
+    <label for="fname">First name:</label>
+    <input type="text" maxlength="255" id="fname" name="fname" required><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" maxlength="255" id="lname" name="lname" required><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<p>{{ returnMessage }}</p>
+
+</body>

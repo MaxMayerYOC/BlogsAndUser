@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #myInput {
+            background-image: url('https://www.w3schools.com/css/searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #blogTable {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            font-size: 18px;
+        }
+
+        #blogTable th, #blogTable td {
+            text-align: left;
+            padding: 12px;
+        }
+
+        #blogTable tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        #blogTable tr.header, #blogTable tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+    <title>Blog Output</title>
+</head>
+<body>
+<h1>Blog Output</h1>
+
+<h3>Click the button to add a blog post.</h3>
+
+<button onclick="document.location='/blog/new'">Add blog</button><br><br>
+
+<input type="text" id="myInput" onkeyup="searchTable(3)" placeholder="Search by Title.." title="Type in a name">
+
+<table id="blogTable">
+    <tr class="header">
+        <th style="width:2%;">Nr.</th>
+        <th style="width:15%;">User First Name</th>
+        <th style="width:10%;">Last Name</th>
+        <th style="width:10%;">Title</th>
+        <th style="width:23%;">Text</th>
+        <th style="width:5%;">Category</th>
+        <th style="width:5%;">Privat</th>
+        <th style="width:10%;">Added At</th>
+        <th style="width:10%;">Changed At</th>
+        <th style="width:10%;">Change Blog</th>
+    </tr>
+    {% for blog in blogs %}
+        <tr>
+            <td>{{ blog.id|e }}</td>
+            <td>{{ blog.user.fname|e }}</td>
+            <td>{{ blog.user.lname|e }}</td>
+            <td>{{ blog.title|e }}</td>
+            <td>{{ blog.text|e }}</td>
+            <td>{{ blog.category|e }}</td>
+            <td>{% if blog.privat|e %}yes{% else %}no{% endif %}</td>
+            <td>{{ blog.dateAdded|format_datetime(locale='eng') }}</td>
+            <td>{{ blog.dateChanged|format_datetime(locale='eng') }}</td>
+            <td>
+                <a href="/blog/change/{{ blog.id|e }}">Link</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+
+<script>
+    function searchTable(n) {
+        let input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("blogTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) { //Iterate over the table Rows
+            td = tr[i].getElementsByTagName("td")[n]; // Which column to search: [0...n]
+            if (td) { //If the Row matches show it
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+</body>

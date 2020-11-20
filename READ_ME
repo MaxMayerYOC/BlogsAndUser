@@ -1,0 +1,5 @@
+sudo cp -R /home/maximilian/sorting/ /var/www/html/
+sudo chown -R www-data: /var/www/html/sorting
+sudo ln -s /etc/nginx/sites-available/sorter /etc/nginx/sites-enabled/
+sudo systemctl restart nginx
+sudo systemctl restart php7.4-fpm

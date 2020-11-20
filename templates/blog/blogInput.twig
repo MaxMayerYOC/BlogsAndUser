@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    </style>
+    <title>Blog Input</title>
+</head>
+<body>
+<h1>Blog Input</h1>
+<h3>Links:</h3>
+
+<button onclick="document.location='/blog/show'">List blogs</button><br><br>
+<button onclick="document.location='/category/new'">New category</button><br><br>
+
+<form method="POST" action="{{ path('blog_new') }}">
+    <label for="user">Choose a User:</label>
+    <select name="user" id="user" required>
+        {% for user in users %}
+            <option value={{ user.id|e }}>{{ user.fname|e }} {{ user.lname|e }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    <label for="title">Title:</label>
+    <input type="text" maxlength="255" id="title" name="title" required><br><br>
+
+    <label for="category">Category:</label>
+    <select name="category" id="category" required>
+        {% for value in categories %}
+            <option value={{ value.id|e }}>{{ value.name|e }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    <p>Blog Post:</p>
+    <label for="text"></label>
+    <textarea name="text" rows="10" cols="30" id="text" maxlength="255" required></textarea>
+    <br><br>
+
+    <label for="privat">privat:</label>
+    <input type="checkbox" id="privat" name="privat"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+
+</body>

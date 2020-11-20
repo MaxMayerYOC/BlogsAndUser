@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    </style>
+    <title>User Input</title>
+</head>
+<body>
+<h1>Category Input</h1>
+<h3>Click the button to go to the blog List.</h3>
+
+<button onclick="document.location='/blog/show'">Blog list</button><br><br>
+
+<h3>Input the Category and Submit</h3>
+<form method="POST" action="{{ path('category_new') }}">
+    <label for="name">Category:</label>
+    <input type="text" maxlength="255" id="name" name="name" required><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<p>{{ returnMessage }}</p>
+
+</body>
