@@ -25,7 +25,7 @@ class Categories
     private ?string $name;
 
     /**
-     * @ORM\OneToMany(targetEntity=Blog::class, mappedBy="categoryNew")
+     * @ORM\OneToMany(targetEntity=Blog::class, mappedBy="category")
      */
     private $blogs;
 

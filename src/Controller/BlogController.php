@@ -57,7 +57,6 @@ class BlogController extends AbstractController
             $blog->setUser($userRepository->find($_REQUEST["user"]))
                 ->setTitle($_REQUEST["title"])
                 ->setText($_REQUEST["text"])
-                ->setCategory($_REQUEST["category"])
                 ->setCategory($categoryRepository->find($_REQUEST["category"]))
                 ->setPrivat($privat)
                 ->setDateAdded(new DateTime())

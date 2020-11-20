@@ -41,7 +41,7 @@ class User
     private ?DateTimeInterface $dateChanged;
 
     /**
-     * @ORM\OneToMany(targetEntity=Blog::class, mappedBy="userNew")
+     * @ORM\OneToMany(targetEntity=Blog::class, mappedBy="user")
      */
     private $blogs;
 
