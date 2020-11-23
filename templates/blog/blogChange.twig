@@ -2,15 +2,61 @@
 <html lang="en">
 <head>
     <style>
+        .dropbtn {
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn:hover, .dropbtn:focus {
+            background-color: #2980B9;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown a:hover {background-color: #ddd;}
+
+        .show {display: block;}
     </style>
     <title>Blog Change</title>
 </head>
 <body>
 <h1>Blog Change</h1>
-<h3>Links:</h3>
 
-<button onclick="document.location='/blog/show'">List blogs</button><br><br>
-<button onclick="document.location='/category/new'">New category</button><br><br>
+<div class="dropdown">
+    <button onclick="dropDown()" class="dropbtn">Menu</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a onclick="document.location='/blog/new'">Add a Blog</a>
+        <a onclick="document.location='/user/new'">Add a User</a>
+        <a onclick="document.location='/category/new'">Add a Category</a>
+        <a onclick="document.location='/blog/show'">Show all Blogs</a>
+        <a onclick="document.location='/blog/recent'">Show recent Blogs</a>
+        <a onclick="document.location='/user/show'">Show Users</a>
+    </div>
+</div><br><br>
 
 <p>Blog post User: {{ blog.fname|e }} {{ blog.lname|e }}</p>
 
@@ -46,4 +92,25 @@
     <p>{% if changed %}Blog changed!{% endif %}</p>
 </form>
 
+<script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function dropDown() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
 </body>
