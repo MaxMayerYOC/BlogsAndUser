@@ -29,12 +29,19 @@ class AppFixtures extends Fixture
     {
         $userRepository = $this->entityManager->getRepository(User::class);
         $categoryRepository = $this->entityManager->getRepository(Categories::class);
-        for ($i = 0; $i < 20; $i++) {
+        $userCount=count($userRepository->findAll());
+        $categoryCount=count($categoryRepository->findAll());
+        for ($i = 1; $i <= 20; $i++) {
             $blogPost = new Blog();
-            $blogPost->setUser($userRepository->find(mt_rand(1,count($userRepository->findAll()))))
+
+            if (mt_rand(0,$categoryCount))
+                $category=$categoryRepository->find(mt_rand(1,$categoryCount));
+            else
+                $category=null;
+            $blogPost->setUser($userRepository->find(mt_rand(1,$userCount)))
                 ->setTitle('Blogpost '.$i)
                 ->setText('Test Blog')
-                ->setCategory($categoryRepository->find(mt_rand(1,count($categoryRepository->findAll()))))
+                ->setCategory($category)
                 ->setPrivat(mt_rand(0,1))
                 ->setDateAdded((new DateTime())->sub(new DateInterval('P'.mt_rand(10,100).'D')))
                 ->setDateChanged((new DateTime())->sub(new DateInterval('P'.mt_rand(0,10).'D')));

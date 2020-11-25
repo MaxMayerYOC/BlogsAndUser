@@ -22,7 +22,7 @@ class BlogRepository extends ServiceEntityRepository
     // /**
     //  * @return Blog[] Returns an array of Blog objects
     //  */
-    public function findRecentChanged($quantity)
+    public function findRecentChanged(int $quantity):array
     {
         return $this->createQueryBuilder('r')
             ->orderBy('r.dateChanged', 'DESC')

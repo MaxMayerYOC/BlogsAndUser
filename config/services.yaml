@@ -32,6 +32,3 @@ services:
     App\Command\:
         resource: '../src/Command/'
         tags: [name: console.command]
-
-    App\public\images\:
-        resource: '../public/images/'

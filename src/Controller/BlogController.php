@@ -13,6 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class BlogController extends AbstractController
 {
@@ -54,18 +55,16 @@ class BlogController extends AbstractController
         );
     }
 
-
     /**
      * @Route("/blog/show",name="blog_show")
      * @param EntityManagerInterface $entityManager
      * @return Response
      */
-    public function show(EntityManagerInterface $entityManager)
+    public function show(EntityManagerInterface $entityManager, SerializerInterface $serializer)
     {
         $blogRepository = $entityManager->getRepository(Blog::class);
         //get all Posts and extract there Data formatted for the "blogOutput"
         $blogs=$blogRepository->findAll();
-
         /* TODO: Sorting the blogposts
         $k=0;
         foreach ($blogs as $blog){
@@ -78,7 +77,7 @@ class BlogController extends AbstractController
 
         //cache User Data for less database queries
         $entityManager->getRepository(User::class)->findAll();
-
+        #return new Response($serializer->serialize($blogs[0],'json'));
         return $this->render('blog/blogOutput.twig', ['blogs'=>$blogs]);
     }
 
@@ -101,9 +100,9 @@ class BlogController extends AbstractController
         }var_dump($sortFlag);
         array_multisort($sortFlag,$blogs);
         */
+
         //cache User Data for less database queries
         $entityManager->getRepository(User::class)->findAll();
-
         return $this->render('blog/blogOutput.twig', ['blogs'=>$blogs]);
     }
 
@@ -115,7 +114,6 @@ class BlogController extends AbstractController
      */
     public function change(EntityManagerInterface $entityManager, $blogId)
     {
-
         $propertyAccessor = PropertyAccess::createPropertyAccessor();
         $blogRepository = $entityManager->getRepository(Blog::class);
         $categoryRepository = $entityManager->getRepository(Categories::class);

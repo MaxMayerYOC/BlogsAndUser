@@ -1,59 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0138e482-8c68-42de-bd5a-2d1bee3d6db4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/READ_ME" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/myw3schoolsimage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataHandling/FileDownload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sorting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sorting.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/READ_ME" beforeDir="false" afterPath="$PROJECT_DIR$/READ_ME" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/cache.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/cache.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/prod/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/routing.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/routing.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/routing.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/test/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/test/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/annotations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes/dev/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes/dev/framework.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/SortedUploads/sorted.array.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/SortedUploads/sorted.array.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/TestData/array.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/TestData/array.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/TestData/sorted.array.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/TestData/sorted.array.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/TestData/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/TestData/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Command/SortCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/SortCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SortController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SortController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataHandling/DataProcessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHandling/DataProcessor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataHandling/FileDataProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHandling/FileDataProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataHandling/Output.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHandling/Output.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataHandling/PathGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHandling/PathGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataHandling/SimpleSortRegistry.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHandling/SimpleSortRegistry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataHandling/SortRegistry.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHandling/SortRegistry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataHandling/SortingInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHandling/SortingInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DependencyInjection/Compiler/SortPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/Compiler/SortPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorter/BubbleSort.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/BubbleSort.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorter/MergeSort.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/MergeSort.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorter/QuickSort.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/QuickSort.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorter/SelectionSort.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorter/SelectionSort.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/BlogRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/BlogRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/sorter/homepage.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sorter/homepage.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translations/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/translations/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/blogOutput.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/blogOutput.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +115,34 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-markdown-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/twig/intl-extra" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/michelf/php-markdown" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/twig/extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hu2BUY7S9EOsGI0Fs4OM4cRPwq" />
@@ -155,7 +160,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/docker_sorting" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -199,11 +204,27 @@
       <workItem from="1603192224505" duration="13973000" />
       <workItem from="1603264522609" duration="1702000" />
       <workItem from="1603714524911" duration="48000" />
+      <workItem from="1605887575017" duration="2199000" />
+      <workItem from="1606212019026" duration="628000" />
+      <workItem from="1606212891810" duration="14000" />
+      <workItem from="1606292909920" duration="125000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -233,10 +254,15 @@
       <screen x="0" y="27" width="1920" height="977" />
     </state>
     <state x="693" y="273" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.977@0.27.1920.977" timestamp="1602487837222" />
-    <state x="3225" y="290" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603714570321">
-      <screen x="1920" y="0" width="2048" height="1152" />
+    <state x="2369" y="84" width="1012" height="918" key="CommitChangelistDialog2" timestamp="1605888484897">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2369" y="84" width="1012" height="918" key="CommitChangelistDialog2/0.27.1920.979/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605888484897" />
+    <state x="3143" y="272" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606212888545">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="1223" y="273" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.977@0.27.1920.977" timestamp="1603103653016" />
+    <state x="3143" y="272" key="FileChooserDialogImpl/0.27.1920.979/1920.0.1920.1080@1920.0.1920.1080" timestamp="1606212888545" />
     <state x="3225" y="290" key="FileChooserDialogImpl/1920.0.2048.1152/0.27.1920.977@1920.0.2048.1152" timestamp="1603714570321" />
     <state x="1006" y="238" width="641" height="617" key="NewPhpClassDialog" timestamp="1603195950879">
       <screen x="0" y="27" width="1920" height="977" />
