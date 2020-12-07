@@ -13,6 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class BlogController extends AbstractController
 {
@@ -25,27 +26,11 @@ class BlogController extends AbstractController
     {
         $userRepository = $entityManager->getRepository(User::class);
         /* @var User[] $usersObject */
-        $usersObject=$userRepository->findAll();
-        $k=0;
-        foreach ($usersObject as $user){
-            $users[$k]=
-                [
-                    'id'=>$user->getId(),
-                    'fname'=>$user->getFname(),
-                    'lname'=>$user->getLname()
-                ];
-            $k++;
-        }if (!isset($users))$users='';
+        $users=$userRepository->findAll();
 
         //Categories
         $categoryRepository = $entityManager->getRepository(Categories::class);
-        $categoryObject=$categoryRepository->findAll();
-        $k=0;
-        foreach ($categoryObject as $category){
-            $categories[$k]=['name'=>$category->getName(),'id'=>$category->getId()];
-            $k++;
-        }
-        if (!isset($categories))$categories='-';
+        $categories=$categoryRepository->findAll();
 
         if(!empty($_REQUEST)) {
             if (isset($_REQUEST["privat"]))
@@ -70,37 +55,30 @@ class BlogController extends AbstractController
         );
     }
 
-
     /**
      * @Route("/blog/show",name="blog_show")
      * @param EntityManagerInterface $entityManager
      * @return Response
      */
-    public function show(EntityManagerInterface $entityManager)
+    public function show(EntityManagerInterface $entityManager, SerializerInterface $serializer)
     {
         $blogRepository = $entityManager->getRepository(Blog::class);
-        $blogObject=$blogRepository->findAll();
+        //get all Posts and extract there Data formatted for the "blogOutput"
+        $blogs=$blogRepository->findAll();
+        /* TODO: Sorting the blogposts
         $k=0;
-
-        foreach ($blogObject as $blog){
-            $user=['fname'=>$blog->getUser()->getFname(),'lname'=>$blog->getUser()->getLname()];
-            $blogs[$k]=[
-                'id'=> $blog->getId(),
-                'title' => $blog->getTitle(),
-                'category' => $blog->getCategory()->getName(),
-                'text' => $blog->getText(),
-                'privat' => $blog->getPrivat(),
-                'dateAdded' => $blog->getDateAdded(),
-                'dateChanged' => $blog->getDateChanged(),
-                'user'=>$user
-            ];
+        foreach ($blogs as $blog){
+            $sortFlag[$k]=$blog["dateAdded"];
+            #$sortFlag[$k]=$blog["user"]["fname"];
             $k++;
-        }
-        if (empty($blogs)){
-            return $this->render('blog/blogOutput.twig', ['blogs'=>'']);
-        }else{
-            return $this->render('blog/blogOutput.twig', ['blogs'=>$blogs]);
-        }
+        }var_dump($sortFlag);
+        array_multisort($sortFlag,$blogs);
+        */
+
+        //cache User Data for less database queries
+        $entityManager->getRepository(User::class)->findAll();
+        #return new Response($serializer->serialize($blogs[0],'json'));
+        return $this->render('blog/blogOutput.twig', ['blogs'=>$blogs]);
     }
 
     /**
@@ -110,30 +88,22 @@ class BlogController extends AbstractController
      */
     public function recent(EntityManagerInterface $entityManager):Response
     {
-
         $blogRepository = $entityManager->getRepository(Blog::class);
-        $blogObject=$blogRepository->findRecentChanged(3);
+        //get the recent changed Posts and extract there Data formatted for the "blogOutput"
+        $blogs=$blogRepository->findRecentChanged(3);
+        /* TODO: Sorting the blogposts
         $k=0;
-        foreach ($blogObject as $blog){
-            $user=['fname'=>$blog->getUser()->getFname(),'lname'=>$blog->getUser()->getLname()];
-            $blogs[$k]=[
-                'id'=> $blog->getId(),
-                'title' => $blog->getTitle(),
-                'category' => $blog->getCategory()->getName(),
-                'text' => $blog->getText(),
-                'privat' => $blog->getPrivat(),
-                'dateAdded' => $blog->getDateAdded(),
-                'dateChanged' => $blog->getDateChanged(),
-                'user'=>$user
-            ];
+        foreach ($blogs as $blog){
+            $sortFlag[$k]=$blog["dateAdded"];
+            #$sortFlag[$k]=$blog["user"]["fname"];
             $k++;
-        }
+        }var_dump($sortFlag);
+        array_multisort($sortFlag,$blogs);
+        */
 
-        if (empty($blogs)){
-            return $this->render('blog/blogOutput.twig', ['blogs'=>'']);
-        }else{
-            return $this->render('blog/blogOutput.twig', ['blogs'=>$blogs]);
-        }
+        //cache User Data for less database queries
+        $entityManager->getRepository(User::class)->findAll();
+        return $this->render('blog/blogOutput.twig', ['blogs'=>$blogs]);
     }
 
     /**
@@ -144,7 +114,6 @@ class BlogController extends AbstractController
      */
     public function change(EntityManagerInterface $entityManager, $blogId)
     {
-
         $propertyAccessor = PropertyAccess::createPropertyAccessor();
         $blogRepository = $entityManager->getRepository(Blog::class);
         $categoryRepository = $entityManager->getRepository(Categories::class);
@@ -174,6 +143,7 @@ class BlogController extends AbstractController
             'dateAdded' => $propertyAccessor->getValue($blog, 'dateAdded'),
             'dateChanged' => $propertyAccessor->getValue($blog, 'dateChanged')
         ];
+
         //Categories
         $categoryObject=$categoryRepository->findAll();
         $k=0;
